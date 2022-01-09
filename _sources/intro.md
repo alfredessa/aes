@@ -1,16 +1,4 @@
-# Welcome to your Jupyter Book
+# Aesthetic Python: Neuron Computation
 
-This is a small sample book to give you a feel for how book content is
-structured.
+This is the web site accompanying the presentation to the Boston Python Users Group on January 13th, 2022.
 
-:::{note}
-Here is a note!
-:::
-
-And here is a code block:
-
-```
-e = mc^2
-```
-
-Check out the content pages bundled with this sample book to see more.
