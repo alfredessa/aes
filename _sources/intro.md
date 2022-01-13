@@ -4,3 +4,4 @@ This is the web site accompanying the presentation to the [Boston Python Users G
 
 The code is made freely available under Tthe [MIT Open Source License](https://opensource.org/licenses/MIT).
 
+Go to [binder](https://mybinder.org/v2/gh/alfredessa/aes-notebooks/HEAD) to open the notebooks in an executable environments.
