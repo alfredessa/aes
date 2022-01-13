@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Neuron &#8212; Aesthetic Python</title>
+    <title>2. Numpy Examples &#8212; Aesthetic Python</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -42,8 +42,6 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -53,8 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. Neuron Class" href="Neuron-Class.html" />
-    <link rel="prev" title="2. Numpy Examples" href="Numpy-Examples.html" />
+    <link rel="next" title="3. Neuron" href="3_Neuron.html" />
+    <link rel="prev" title="1. Python Examples" href="1_PythonExamples.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -100,27 +98,27 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Python-Examples.html">
+  <a class="reference internal" href="1_PythonExamples.html">
    1. Python Examples
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Numpy-Examples.html">
-   2. Numpy Examples
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
+   2. Numpy Examples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_Neuron.html">
    3. Neuron
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Neuron-Class.html">
+  <a class="reference internal" href="4_NeuronClass.html">
    4. Neuron Class
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Neuron-BatchInput.html">
+  <a class="reference internal" href="5_NeuronBatchInput.html">
    5. Neuron-Batch Input
   </a>
  </li>
@@ -165,7 +163,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/Neuron.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/2_NumpyExamples.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -185,7 +183,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/alfredessa/aes//issues/new?title=Issue%20on%20page%20%2FNeuron.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/alfredessa/aes//issues/new?title=Issue%20on%20page%20%2F2_NumpyExamples.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -206,7 +204,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/alfredessa/aes/master?urlpath=tree/docs/Neuron.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/alfredessa/aes/master?urlpath=tree/docs/2_NumpyExamples.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -229,56 +227,19 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#neuron-without-activation-function">
-   Neuron without activation function
+  <a class="reference internal nav-link" href="#example-1">
+   Example 1:
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-input-x-and-neuron-parameters-w-b">
-     Example input (
-     <span class="math notranslate nohighlight">
-      \(x\)
-     </span>
-     ) and neuron parameters (
-     <span class="math notranslate nohighlight">
-      \(w, b\)
-     </span>
-     )
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#define-function-to-compute-neuron-input-without-activation-function">
-     Define function to compute neuron input (without activation function)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#compute-neuron-output">
-     Compute neuron output
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#neuron-with-activation-function">
-   Neuron with activation function
+  <a class="reference internal nav-link" href="#example-2">
+   Example 2:
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#define-activation-functions-sigmoid-and-relu">
-     Define activation functions, sigmoid and relu
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#define-neuron-output">
-     Define neuron output
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Compute neuron output
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-3">
+   Example 3:
+  </a>
  </li>
 </ul>
 
@@ -291,108 +252,113 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="neuron">
-<h1>3. Neuron<a class="headerlink" href="#neuron" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="numpy-examples">
+<h1>2. Numpy Examples<a class="headerlink" href="#numpy-examples" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="neuron-without-activation-function">
-<h2>Neuron without activation function<a class="headerlink" href="#neuron-without-activation-function" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="example-input-x-and-neuron-parameters-w-b">
-<h3>Example input (<span class="math notranslate nohighlight">\(x\)</span>) and neuron parameters (<span class="math notranslate nohighlight">\(w, b\)</span>)<a class="headerlink" href="#example-input-x-and-neuron-parameters-w-b" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define inputs as x</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">2.3</span><span class="p">,</span><span class="mf">4.5</span><span class="p">,</span><span class="mf">1.3</span><span class="p">])</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">random</span>
 
-<span class="c1"># define weights as w</span>
-<span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">3.2</span><span class="p">,</span><span class="o">-</span><span class="mf">1.9</span><span class="p">,</span><span class="mf">2.5</span><span class="p">])</span>
-
-<span class="c1"># define bias</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">suppress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="define-function-to-compute-neuron-input-without-activation-function">
-<h3>Define function to compute neuron input (without activation function)<a class="headerlink" href="#define-function-to-compute-neuron-input-without-activation-function" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-1">
+<h2>Example 1:<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># function for neuron output</span>
-<span class="k">def</span> <span class="nf">neuron_output</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the array</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="compute-neuron-output">
-<h3>Compute neuron output<a class="headerlink" href="#compute-neuron-output" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">neuron_output</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Perform the computation</span>
+<span class="n">A</span> <span class="o">*</span> <span class="n">A</span> <span class="c1"># element-wise</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1.06])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 1,  4,  9, 16, 25])
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="neuron-with-activation-function">
-<h2>Neuron with activation function<a class="headerlink" href="#neuron-with-activation-function" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="define-activation-functions-sigmoid-and-relu">
-<h3>Define activation functions, sigmoid and relu<a class="headerlink" href="#define-activation-functions-sigmoid-and-relu" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-2">
+<h2>Example 2:<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define sigmoid and relu functions (activation functions)</span>
-<span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># generate 25 evenly spaced points in the interval -pi to pi</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">relu</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="define-neuron-output">
-<h3>Define neuron output<a class="headerlink" href="#define-neuron-output" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define neuron_output function with activation function as input parameter</span>
-<span class="k">def</span> <span class="nf">neuron_output</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">activation_function</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">activation_function</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="id1">
-<h3>Compute neuron output<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Compute neuron output with activation function</span>
+<span class="c1"># compute sin and cos for the points</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">neuron_output</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">b</span><span class="p">,</span> <span class="n">sigmoid</span><span class="p">))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">neuron_output</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">b</span><span class="p">,</span> <span class="n">relu</span><span class="p">))</span>
+<span class="c1"># plot sin and cos </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="s1">&#39;-.&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y2</span><span class="p">,</span><span class="s1">&#39;-.&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.74269055]
-[1.06]
+<img alt="_images/2_NumpyExamples_6_0.png" src="_images/2_NumpyExamples_6_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="example-3">
+<h2>Example 3:<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">10000</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span><span class="mi">10000</span><span class="p">))</span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 534 ms, sys: 247 ms, total: 781 ms
+Wall time: 289 ms
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(10000, 10000)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># matrix size is 100000 x 100000</span>
+<span class="n">c</span><span class="o">.</span><span class="n">size</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100000000
+</pre></div>
 </div>
 </div>
 </div>
@@ -424,17 +390,17 @@
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Numpy-Examples.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="1_PythonExamples.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">2. Numpy Examples</p>
+            <p class="prev-next-title">1. Python Examples</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Neuron-Class.html" title="next page">
+    <a class='right-next' id="next-link" href="3_Neuron.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">4. Neuron Class</p>
+        <p class="prev-next-title">3. Neuron</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
