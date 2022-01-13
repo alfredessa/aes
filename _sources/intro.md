@@ -1,4 +1,6 @@
-# Intro
+# Introduction
 
-This is the web site accompanying the presentation to the Boston Python Users Group on January 13th, 2022.
+This is the web site accompanying the presentation to the [Boston Python Users Group Meetup](https://www.meetup.com/bostonpython/) on January 13th, 2022. 
+
+The code is made freely available under Tthe [MIT Open Source License](https://opensource.org/licenses/MIT).
 
